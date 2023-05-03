@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-
+```
 kaizen@arch ~ $ neofetch
                    -`                    kaizen@
                   .o+`                   -------
@@ -47,3 +47,4 @@ kaizen@arch ~ $ neofetch
   `+sso+:-`                 `.-/+oso:    Font: Inter 14 [GTK2/3]
  `++:.                           `-/+/   Locale: en_US.UTF-8
  .`                                 `/
+```
