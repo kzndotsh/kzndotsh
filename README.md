@@ -1,31 +1,20 @@
 ### Hi there 👋
 Currently studying fullstack development at @bloominstituteoftechnology 👨🏻‍💻
 
-Tech stack being learned:
-- HTML/CSS/JS
-- React/Redux
-- Express
-
-I use arch by the way. Experienced with Debian/Ubuntu also. Dabbled in bash for quite some time.
+Currently learning about:
+- HTML, CSS, Git, JavaScript and UI Principles
+- ‍React, Redux, React Router, HTTP/Ajax, and Functional Programming Techniques
+- Advanced React, State Management and Web Applications
+- Node.js, Express, Web APIs, Data Persistence, Authentication and Testing
+- Data Structures, Graphs, Hash Tables, Algorithms
 
 Hacker at heart.
 
 Ask me about my Docker/Ansible related side projects!
 
-<!--
-**kaizensh/kaizensh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I use arch by the way however I am also experienced with Debian/Ubuntu also. 
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Dabbled with bash for quite some time because of that and I love using a terminal!
 ```
 kaizen@arch ~ $ neofetch
                    -`                    kaizen@
