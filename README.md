@@ -12,9 +12,11 @@ Hacker at heart.
 
 Ask me about my Docker/Ansible related side projects!
 
-I use arch by the way however I am also experienced with Debian/Ubuntu also. 
+I use arch by the way however I am also experienced with Debian/Ubuntu.
 
 Dabbled with bash for quite some time because of that and I love using a terminal!
+
+I'd love to learn Python sometime soon.
 ```
 kaizen@arch ~ $ neofetch
                    -`                    kaizen@
