@@ -1,4 +1,9 @@
-![Metrics](https://metrics.lecoq.io/kaizensh)
+<a href="#">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=kaizensh&theme=tokyonight&show_icons=true&show=reviews,prs_merged,prs_merged_percentage" />
+</a>
+<a href="#">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=kaizensh&layout=compact&langs_count=8&card_width=320&theme=tokyonight" />
+</a>
 
 ### Hi there 👋
 Currently studying fullstack development at @bloominstituteoftechnology 👨🏻‍💻
@@ -19,3 +24,7 @@ I use arch by the way however I am also experienced with Debian/Ubuntu.
 Dabbled with bash for quite some time because of that and I love using a terminal!
 
 I'd love to learn Python sometime soon.
+
+
+
+![Metrics](https://metrics.lecoq.io/kaizensh)
