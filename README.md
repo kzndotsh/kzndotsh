@@ -24,7 +24,3 @@ I use arch by the way however I am also experienced with Debian/Ubuntu.
 Dabbled with bash for quite some time because of that and I love using a terminal!
 
 I'd love to learn Python sometime soon.
-
-
-
-![Metrics](https://metrics.lecoq.io/kaizensh)
