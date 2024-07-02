@@ -8,6 +8,7 @@
 # Hello World 👋
 
 ## About Me
+- Currently building [Tux](https://github.com/allthingslinux/tux) and https://discord.gg/linux
 - Graduate of the Full Stack Web Development Program at Bloom Institute of Technology
 - Hacker at heart - I call it creative engineering ;)
 - Lover of open source and Linux - I use Arch btw, check out my [dotfiles](https://github.com/kzndotsh/dotfiles)! 
