@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="572" class="large">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="406" class="large">
 
   <defs><style/></defs>
   <style data-optimizable="true">/* SVG global context */
@@ -1700,7 +1700,7 @@
         
           <small>
             
-              estimation from 47mb of code in 11993 edited files across 2444 commits
+              estimation from 47mb of code in 12011 edited files across 2451 commits
             
           </small>
         
@@ -1711,21 +1711,21 @@
             </mask>
             <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
             
-              <rect mask="url(#languages-bar)" x="0" y="0" width="170.25200872714134" height="8" fill="#000080"/>
+              <rect mask="url(#languages-bar)" x="0" y="0" width="170.04354543032585" height="8" fill="#000080"/>
             
-              <rect mask="url(#languages-bar)" x="170.25200872714134" y="0" width="68.8135977680412" height="8" fill="#663399"/>
+              <rect mask="url(#languages-bar)" x="170.04354543032585" y="0" width="68.72933967579483" height="8" fill="#663399"/>
             
-              <rect mask="url(#languages-bar)" x="239.06560649518258" y="0" width="67.03185634649559" height="8" fill="#f1e05a"/>
+              <rect mask="url(#languages-bar)" x="238.77288510612067" y="0" width="66.94977988895407" height="8" fill="#f1e05a"/>
             
-              <rect mask="url(#languages-bar)" x="306.0974628416782" y="0" width="50.88448723349262" height="8" fill="#3572A5"/>
+              <rect mask="url(#languages-bar)" x="305.7226649950747" y="0" width="50.82218225368789" height="8" fill="#3572A5"/>
             
-              <rect mask="url(#languages-bar)" x="356.9819500751708" y="0" width="47.220647407570375" height="8" fill="#ededed"/>
+              <rect mask="url(#languages-bar)" x="356.5448472487626" y="0" width="47.16282857823651" height="8" fill="#ededed"/>
             
-              <rect mask="url(#languages-bar)" x="404.20259748274117" y="0" width="46.785098616339376" height="8" fill="#67b8de"/>
+              <rect mask="url(#languages-bar)" x="403.7076758269991" y="0" width="46.72781309018133" height="8" fill="#67b8de"/>
             
-              <rect mask="url(#languages-bar)" x="450.98769609908055" y="0" width="29.66154378640594" height="8" fill="#3178c6"/>
+              <rect mask="url(#languages-bar)" x="450.43548891718046" y="0" width="29.625225018406788" height="8" fill="#3178c6"/>
             
-              <rect mask="url(#languages-bar)" x="480.6492398854865" y="0" width="439.35076011451355" height="8" fill="#ededed"/>
+              <rect mask="url(#languages-bar)" x="480.0607139355872" y="0" width="439.93928606441267" height="8" fill="#ededed"/>
             
           </svg>
         
@@ -1842,124 +1842,6 @@
 
       
       
-          <div class="row">
-          
-            <section class="column chart">
-              <h3>Projects activity</h3>
-              <div class="chart-bars horizontal">
-                
-                  
-                    <div class="entry">
-                      <span class="name">tux</span>
-                      <div class="bar" style="width: 46.248000000000005%; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
-                      <span class="value">58%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">irc.atl.chat</span>
-                      <div class="bar" style="width: 14.44%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">18%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">xmpp.atl.chat</span>
-                      <div class="bar" style="width: 14.391999999999998%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">18%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">disctask</span>
-                      <div class="bar" style="width: 1.6239999999999999%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">2%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">skidcity</span>
-                      <div class="bar" style="width: 1.248%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">2%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">atl.wiki-configs</span>
-                      <div class="bar" style="width: 1.032%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">1%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">syschatdump</span>
-                      <div class="bar" style="width: 1.008%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">1%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">py-pglite</span>
-                      <div class="bar" style="width: 0.008%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">0%</span>
-                    </div>
-                  
-                
-              </div>
-            </section>
-        
-            <section class="column chart">
-              <h3>Language activity</h3>
-              <div class="chart-bars horizontal">
-                
-                  
-                    <div class="entry">
-                      <span class="name">Python</span>
-                      <div class="bar" style="width: 29.751999999999995%; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
-                      <span class="value">37%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">Other</span>
-                      <div class="bar" style="width: 11.464%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">14%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">YAML</span>
-                      <div class="bar" style="width: 10.968%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">14%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">Markdown</span>
-                      <div class="bar" style="width: 9.016%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">11%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">Lua</span>
-                      <div class="bar" style="width: 6.343999999999999%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">8%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">Bash</span>
-                      <div class="bar" style="width: 4.5200000000000005%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">6%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">Docker</span>
-                      <div class="bar" style="width: 2.92%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">4%</span>
-                    </div>
-                  
-                    <div class="entry">
-                      <span class="name">TOML</span>
-                      <div class="bar" style="width: 2.384%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
-                      <span class="value">3%</span>
-                    </div>
-                  
-                
-              </div>
-            </section>
-        
-        </div>
-      
 
     
   </section>
@@ -2017,7 +1899,7 @@
                 
                   <rect class="day" x="180" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
                 
-                  <rect class="day" x="195" y="0" width="11" height="11" fill="#40c463" rx="2" ry="2"/>
+                  <rect class="day" x="195" y="0" width="11" height="11" fill="#30a14e" rx="2" ry="2"/>
                 
               </g>
             </svg>
@@ -2147,7 +2029,7 @@
                 <div class="field ">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"/></svg>
                   
-                    431 views in last two weeks
+                    459 views in last two weeks
                   
                 </div>
             
@@ -2255,7 +2137,7 @@
           
             <span>These metrics include private contributions</span>
           
-          <span>Last updated 12 Sept 2025, 13:51:51 (timezone America/New_York) with lowlighter/metrics@3.34.0</span>
+          <span>Last updated 12 Sept 2025, 14:10:31 (timezone America/New_York) with lowlighter/metrics@3.34.0</span>
         </footer>
       
 
