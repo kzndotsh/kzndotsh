@@ -1,0 +1,30 @@
+name: 🧪 Test Self-Hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: 🏠 Test Self-Hosted Runner
+        run: |
+          echo "🎉 Self-hosted runner is working!"
+          echo "Runner name: $(hostname)"
+          echo "User: $(whoami)"
+          echo "OS: $(uname -a)"
+          echo "Docker version: $(docker --version)"
+          echo "Current directory: $(pwd)"
+          echo "Date: $(date)"
+          
+      - name: 🐳 Test Docker
+        run: |
+          docker run --rm hello-world
+          
+      - name: 📊 Test Metrics Dependencies
+        run: |
+          echo "Checking dependencies..."
+          jq --version
+          curl --version
+          git --version
+          echo "✅ All dependencies available!"
