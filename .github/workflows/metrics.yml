@@ -74,7 +74,7 @@ jobs:
           # ⏰ WakaTime Stats (optional - won't fail if token missing)
           plugin_wakatime: true
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN || '' }}
-          plugin_wakatime_sections: time,projects,projects-graphs,languages,languages-graphs,editors,os
+          plugin_wakatime_sections: time,projects,languages,editors,os
           plugin_wakatime_days: 30
           plugin_wakatime_limit: 8
           plugin_wakatime_languages_other: true
