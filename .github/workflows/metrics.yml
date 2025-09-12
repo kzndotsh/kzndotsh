@@ -1,11 +1,13 @@
-name: Metrics
+name: 🚀 GitHub Metrics Generator
+
 on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
+  # Schedule daily updates at 2 AM UTC
+  schedule: [{cron: "0 2 * * *"}]
+  # Run workflow manually
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
+  # Run workflow when pushing to main
+  push: {branches: ["main"]}
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -14,7 +16,187 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: 📊 Generate GitHub Metrics
+        uses: lowlighter/metrics@latest
         with:
+          # 🔑 Authentication
           token: ${{ secrets.METRICS_TOKEN }}
-          plugins: organizations
+          
+          # 🎨 Template & Display
+          template: classic
+          config_display: columns
+          config_padding: ["0", "8 + 11%"]
+          config_animations: true
+          config_twemoji: true
+          config_gemoji: true
+          config_octicon: true
+          
+          # 📁 Base Content
+          base: header, activity, community, repositories, metadata
+          base_indepth: true
+          base_hireable: true
+          
+          # 🏆 Achievements
+          plugin_achievements: true
+          plugin_achievements_threshold: C
+          plugin_achievements_secrets: true
+          plugin_achievements_display: detailed
+          plugin_achievements_limit: 20
+          
+          # 📅 Activity & Calendar
+          plugin_activity: true
+          plugin_activity_limit: 20
+          plugin_activity_load: 200
+          plugin_activity_days: 365
+          plugin_activity_timestamps: true
+          plugin_activity_filter: commits,pr,issues,reviews
+          
+          plugin_calendar: true
+          plugin_calendar_limit: 3
+          
+          # 🈷️ Languages
+          plugin_languages: true
+          plugin_languages_indepth: true
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1
+          plugin_languages_other: true
+          plugin_languages_details: true
+          plugin_languages_sections: most-used,recently-used
+          
+          # 👨‍💻 Lines of Code
+          plugin_lines: true
+          plugin_lines_sections: repositories,history
+          plugin_lines_repositories_limit: 10
+          plugin_lines_history_limit: 3
+          
+          # 📓 Featured Repositories
+          plugin_repositories: true
+          plugin_repositories_featured: true
+          plugin_repositories_pinned: true
+          plugin_repositories_starred: true
+          plugin_repositories_random: true
+          plugin_repositories_order: stars
+          plugin_repositories_forks: true
+          
+          # 🌟 Stars & Topics
+          plugin_stars: true
+          plugin_stars_limit: 10
+          
+          plugin_topics: true
+          plugin_topics_mode: icons
+          plugin_topics_sort: stars
+          plugin_topics_limit: 20
+          
+          # 🎩 Notable Contributions
+          plugin_notable: true
+          plugin_notable_indepth: true
+          plugin_notable_types: commits,pr,issues,reviews
+          plugin_notable_from: user,organization
+          plugin_notable_self: false
+          
+          # 💡 Coding Habits
+          plugin_habits: true
+          plugin_habits_from: commits,pr,issues,reviews
+          plugin_habits_days: 365
+          plugin_habits_facts: true
+          plugin_habits_charts: true
+          plugin_habits_charts_type: activity
+          plugin_habits_trim: true
+          plugin_habits_languages_limit: 8
+          plugin_habits_languages_threshold: 1
+          
+          # 🎟️ Follow-up
+          plugin_followup: true
+          plugin_followup_sections: created,assigned,mentioned
+          plugin_followup_indepth: true
+          plugin_followup_archived: false
+          
+          # 🧑‍🤝‍🧑 People
+          plugin_people: true
+          plugin_people_limit: 20
+          plugin_people_types: followers,following,sponsors
+          plugin_people_size: large
+          plugin_people_shuffle: true
+          
+          # 🎭 Reactions
+          plugin_reactions: true
+          plugin_reactions_limit: 20
+          plugin_reactions_limit_issues: 10
+          plugin_reactions_limit_discussions: 10
+          plugin_reactions_limit_discussions_comments: 20
+          plugin_reactions_days: 365
+          plugin_reactions_display: table
+          plugin_reactions_details: true
+          
+          # 🗂️ Projects
+          plugin_projects: true
+          plugin_projects_limit: 10
+          plugin_projects_descriptions: true
+          
+          # 🎫 Gists
+          plugin_gists: true
+          
+          # 🌇 GitHub Skyline
+          plugin_skyline: true
+          plugin_skyline_year: 2024
+          plugin_skyline_frames: 60
+          plugin_skyline_quality: high
+          
+          # 📰 Recent Activity
+          plugin_activity: true
+          plugin_activity_limit: 20
+          plugin_activity_load: 200
+          plugin_activity_days: 30
+          plugin_activity_visibility: public
+          plugin_activity_timestamps: true
+          plugin_activity_filter: commits,pr,issues,reviews,releases
+          
+          # 🧮 Traffic
+          plugin_traffic: true
+          
+          # ♐ Random Code
+          plugin_code: true
+          plugin_code_lines: 10
+          plugin_code_load: 100
+          plugin_code_days: 365
+          plugin_code_visibility: public
+          plugin_code_languages: JavaScript,TypeScript,Python,Go,Rust
+          
+          # 🏅 Contributors
+          plugin_contributors: true
+          plugin_contributors_sections: repositories,organizations
+          plugin_contributors_categories: commits,pr,issues,reviews
+          
+          # 📜 Licenses
+          plugin_licenses: true
+          plugin_licenses_ratio: true
+          plugin_licenses_legal: true
+          
+          # 💫 Star Lists
+          plugin_starlists: true
+          plugin_starlists_limit: 5
+          plugin_starlists_limit_repositories: 10
+          plugin_starlists_languages: true
+          plugin_starlists_limit_languages: 5
+          plugin_starlists_shuffle_repositories: true
+          
+          # 🎲 Community Plugins
+          plugin_fortune: true
+          
+          # ⚙️ Configuration
+          config_timezone: America/New_York
+          config_order: base,achievements,activity,calendar,languages,lines,repositories,stars,topics,notable,habits,followup,people,reactions,projects,gists,skyline,traffic,code,contributors,licenses,starlists,fortune
+          optimize: true
+          verify: true
+          retries: 3
+          retries_delay: 5
+          
+          # 📤 Output
+          filename: github-metrics.svg
+          output_action: commit
+          output_condition: data-changed
+          committer_message: "🚀 Auto-generated metrics for run #${{ github.run_number }}"
+          
+          # 🔧 Debug
+          debug: false
+          plugins_errors_fatal: false
