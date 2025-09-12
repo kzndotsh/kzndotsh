@@ -1,17 +1,5 @@
 ![Metrics](/github-metrics.svg)
 
-## 📊 Analytics & Insights
-
-### 🧮 Repository Traffic
-Track page views and visitor analytics across your repositories to see which projects are getting the most attention.
-
-### ⏰ WakaTime Coding Activity
-Monitor your coding time, languages used, editors, and productivity patterns with detailed time tracking analytics.
-
-# Hello World 👋
-
-> 🚀 **Powered by [lowlighter/metrics](https://github.com/lowlighter/metrics)** - This profile is automatically updated with comprehensive GitHub metrics including activity, languages, achievements, and more!
-
 ## About Me
 - **Senior Software Engineer & Solutions Architect** with nearly 10 years of experience
 - Currently building [Tux](https://github.com/allthingslinux/tux) and leading [All Things Linux](https://discord.gg/linux) (14K+ members)
@@ -50,46 +38,3 @@ Monitor your coding time, languages used, editors, and productivity patterns wit
 
 ### Operating Systems
 <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" /> <img src="https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white" /> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" /> <img src="https://img.shields.io/badge/NixOS-41439B?style=for-the-badge&logo=NixOS&logoColor=white" />
-
----
-
-## 📊 GitHub Metrics Setup
-
-This profile showcases an **advanced GitHub metrics configuration** using the [lowlighter/metrics](https://github.com/lowlighter/metrics) action. The metrics are automatically generated and updated daily with:
-
-### 🎯 Features Enabled
-- **🏆 Achievements**: Detailed GitHub achievements with secrets
-- **📅 Activity Calendar**: Full year commit calendar with isometric view
-- **🈷️ Languages**: In-depth language analysis with recent activity
-- **👨‍💻 Code Statistics**: Lines of code changed across repositories
-- **📓 Repository Showcase**: Featured, pinned, and starred repositories
-- **🎩 Notable Contributions**: Contributions to other projects
-- **💡 Coding Habits**: Activity patterns and interesting facts
-- **🧑‍🤝‍🧑 Community**: Followers, following, and sponsors
-- **🌇 GitHub Skyline**: 3D visualization of commit activity
-- **🎲 Random Elements**: Fortune cookies and code snippets
-
-### 🔧 Technical Implementation
-- **Submodule Integration**: Metrics repository kept in sync via git submodule
-- **Automated Workflow**: Daily updates at 2 AM UTC via GitHub Actions
-- **Smart Updates**: Only commits when data actually changes
-- **Comprehensive Coverage**: 20+ plugins with 100+ configuration options
-- **Performance Optimized**: SVG optimization and caching enabled
-
-### 🚀 Getting Started
-To replicate this setup:
-
-1. **Add the submodule**:
-   ```bash
-   git submodule add https://github.com/lowlighter/metrics.git metrics
-   ```
-
-2. **Create GitHub Personal Token** with appropriate scopes
-
-3. **Add the workflow** (already configured in `.github/workflows/metrics.yml`)
-
-4. **Set repository secret** `METRICS_TOKEN` with your personal access token
-
-The workflow will automatically generate comprehensive metrics and update your profile daily!
-
-> 💡 **Pro Tip**: The configuration includes advanced features like indepth analysis, achievement secrets, and community plugins for the most comprehensive GitHub profile possible.

@@ -24,8 +24,8 @@ jobs:
           
           # 🎨 Template & Display
           template: classic
-          config_display: columns
-          config_padding: "0, 8 + 11%"
+          config_display: large
+          config_padding: "0, 0"
           config_animations: true
           config_twemoji: true
           config_gemoji: true
