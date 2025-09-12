@@ -19,11 +19,27 @@ jobs:
       - name: 🧹 Clean Up Old Files
         run: |
           echo "Cleaning up old diagnostic files..."
-          rm -rf /home/kaizen/github-runner/_diag/pages/*.log
-          rm -rf /home/kaizen/github-runner/_work/_temp/*
+          # Use environment variables for paths
+          RUNNER_DIR="${RUNNER_DIR:-$HOME/github-runner}"
+          rm -rf "$RUNNER_DIR/_diag/pages"/*.log 2>/dev/null || true
+          rm -rf "$RUNNER_DIR/_work/_temp"/* 2>/dev/null || true
           echo "Cleanup completed"
           
+      - name: 🔍 Check Dependencies
+        run: |
+          echo "Checking required dependencies..."
+          for cmd in docker jq curl git; do
+            if ! command -v $cmd &> /dev/null; then
+              echo "❌ $cmd is not installed"
+              exit 1
+            else
+              echo "✅ $cmd is available"
+            fi
+          done
+          echo "All dependencies are available!"
+          
       - name: 📊 Generate GitHub Metrics
+        timeout-minutes: 10
         uses: lowlighter/metrics@latest
         with:
           # 🔑 Authentication
@@ -72,9 +88,9 @@ jobs:
           # 🧮 Traffic Stats
           plugin_traffic: true
           
-          # ⏰ WakaTime Stats
+          # ⏰ WakaTime Stats (optional - won't fail if token missing)
           plugin_wakatime: true
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN || '' }}
           plugin_wakatime_sections: time,projects,projects-graphs,languages,languages-graphs,editors,os
           plugin_wakatime_days: 30
           plugin_wakatime_limit: 8
