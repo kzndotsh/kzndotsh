@@ -1,0 +1,71 @@
+name: Terminal Metrics
+
+on:
+  schedule:
+    # Runs every 12 hours
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate terminal-style metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # Core settings
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: kzndotsh
+          template: terminal
+          filename: github-metrics-terminal.svg
+          
+          # Base content
+          base: header, metadata
+          
+          # Language analysis
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_details: lines, bytes-size
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1%
+          plugin_languages_ignored: html, css, dockerfile, makefile, shell
+          
+          # Lines of code
+          plugin_lines: yes
+          plugin_lines_sections: both
+          plugin_lines_repositories_limit: 10
+          
+          # Isometric calendar
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          
+          # Traffic data
+          plugin_traffic: yes
+          
+          # PageSpeed (if you have a website)
+          # plugin_pagespeed: yes
+          # plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
+          # plugin_pagespeed_url: https://your-website.com
+          
+          # Screenshot (if you have a website)
+          # plugin_screenshot: yes
+          # plugin_screenshot_url: https://your-website.com
+          
+          # Configuration
+          config_timezone: America/New_York
+          config_display: large
+          config_padding: 0, 0
+          
+          # Output settings
+          output_action: commit
+          output_condition: data-changed
+          committer_message: 🖥️ Updated terminal metrics for run #${{ github.run_number }}
+          
+          # Optimization
+          optimize: yes
+          verify: yes
+          
+          # Debug
+          debug: no

@@ -1,0 +1,151 @@
+name: Advanced Metrics
+
+on:
+  schedule:
+    # Runs daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Generate comprehensive metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # Core settings
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: kzndotsh
+          template: classic
+          filename: github-metrics.svg
+          
+          # Base content
+          base: header, metadata, repositories
+          base_indepth: yes
+          repositories: 100
+          repositories_forks: no
+          repositories_affiliations: owner, collaborator
+          
+          # Language analysis with indepth mode
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: lines, bytes-size, percentage
+          plugin_languages_limit: 10
+          plugin_languages_threshold: 0.5%
+          plugin_languages_ignored: html, css, dockerfile, makefile, shell, tex, less, qmake, lex, cmake, gnuplot
+          plugin_languages_colors: rainbow
+          plugin_languages_aliases: javascript:JS, typescript:TS, python:Python, java:Java
+          
+          # Isometric calendar - full year
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          
+          # Lines of code analysis
+          plugin_lines: yes
+          plugin_lines_sections: both
+          plugin_lines_repositories_limit: 15
+          plugin_lines_history_limit: 3
+          
+          # Recent activity
+          plugin_activity: yes
+          plugin_activity_limit: 25
+          plugin_activity_days: 30
+          plugin_activity_filter: commits, issues, pull-requests, releases
+          
+          # Featured repositories
+          plugin_repositories: yes
+          plugin_repositories_featured: kzndotsh/dotfiles, allthingslinux/tux
+          plugin_repositories_starred: yes
+          plugin_repositories_random: yes
+          plugin_repositories_order: stars
+          
+          # Achievements
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_limit: 15
+          plugin_achievements_threshold: C
+          
+          # Notable contributions
+          plugin_notable: yes
+          plugin_notable_indepth: yes
+          plugin_notable_types: commits, issues, pull-requests, releases
+          plugin_notable_from: user, organization
+          
+          # Topics
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_topics_limit: 25
+          plugin_topics_sort: stars
+          
+          # Recently starred
+          plugin_stars: yes
+          plugin_stars_limit: 15
+          
+          # GitHub Skyline
+          plugin_skyline: yes
+          plugin_skyline_year: 2024
+          plugin_skyline_frames: 30
+          plugin_skyline_quality: high
+          
+          # Habits and coding patterns
+          plugin_habits: yes
+          plugin_habits_from: commits, issues, pull-requests
+          plugin_habits_days: 30
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: activity
+          
+          # Follow-up on issues and PRs
+          plugin_followup: yes
+          plugin_followup_sections: both
+          plugin_followup_indepth: yes
+          
+          # People (followers, following)
+          plugin_people: yes
+          plugin_people_types: followers, following
+          plugin_people_limit: 20
+          plugin_people_size: large
+          
+          # Discussions
+          plugin_discussions: yes
+          plugin_discussions_categories: general, ideas, polls, q-and-a, announcements
+          
+          # Projects
+          plugin_projects: yes
+          plugin_projects_limit: 10
+          
+          # Gists
+          plugin_gists: yes
+          
+          # Code snippets
+          plugin_code: yes
+          plugin_code_lines: 10
+          plugin_code_languages: javascript, typescript, python, java, go, rust
+          
+          # Configuration
+          config_timezone: America/New_York
+          config_animations: yes
+          config_display: large
+          config_padding: 0, 0
+          config_twemoji: yes
+          config_octicon: yes
+          
+          # Output settings
+          output_action: commit
+          output_condition: data-changed
+          committer_message: 📊 Updated comprehensive metrics for run #${{ github.run_number }}
+          
+          # Optimization
+          optimize: yes
+          verify: yes
+          
+          # Retry settings
+          retries: 2
+          retries_delay: 30
+          
+          # Debug
+          debug: no

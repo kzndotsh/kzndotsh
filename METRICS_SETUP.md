@@ -1,139 +1,131 @@
-# 📊 GitHub Metrics Setup Guide
+# 📊 GitHub Metrics Setup
 
-## 🎯 Overview
+This repository uses [lowlighter/metrics](https://github.com/lowlighter/metrics) to generate beautiful, comprehensive GitHub profile metrics.
 
-This repository now includes a comprehensive GitHub metrics setup using the [lowlighter/metrics](https://github.com/lowlighter/metrics) action, integrated as a git submodule for version control and easy updates.
+## 🚀 What's Included
 
-## 🔧 Submodule Management
+### Multiple Workflow Configurations
 
-### Initial Setup (Already Done)
-```bash
-git submodule add https://github.com/lowlighter/metrics.git metrics
-```
+1. **`metrics.yml`** - Standard comprehensive metrics
+2. **`metrics-advanced.yml`** - Advanced metrics with all features
+3. **`metrics-terminal.yml`** - Terminal-style aesthetic
 
-### Updating the Metrics Repository
-```bash
-# Update to latest version
-git submodule update --remote metrics
+### 🎯 Features Enabled
 
-# Commit the update
-git add metrics
-git commit -m "🔄 Update metrics submodule to latest version"
-```
+- **📅 Isometric Commit Calendar** - Full year 3D visualization
+- **🈷️ Language Analysis** - Indepth analysis with recent activity
+- **👨‍💻 Lines of Code** - Productivity metrics
+- **📰 Recent Activity** - Latest contributions
+- **📓 Featured Repositories** - Showcase your best work
+- **🏆 Achievements** - GitHub badges and accomplishments
+- **🎩 Notable Contributions** - Impact across projects
+- **📌 Topics** - Technologies you work with
+- **🌟 Recently Starred** - Learning and interests
+- **🌇 GitHub Skyline** - 3D contribution visualization
+- **💡 Coding Habits** - Patterns and statistics
+- **🎟️ Follow-up** - Issue and PR management
+- **🧑‍🤝‍🧑 People** - Network connections
+- **💬 Discussions** - Community engagement
+- **🗂️ Projects** - Project management
+- **🎫 Gists** - Code snippets
+- **♐ Code Snippets** - Random code from your repos
 
-### Cloning This Repository
-```bash
-# Clone with submodules
-git clone --recurse-submodules https://github.com/kzndotsh/kzndotsh.git
+## 🔧 Setup Instructions
 
-# Or if already cloned
-git submodule update --init --recursive
-```
+### 1. GitHub Token Setup
 
-## 🚀 Workflow Configuration
-
-The GitHub Actions workflow (`.github/workflows/metrics.yml`) is configured with:
-
-### ⚙️ Core Features
-- **Daily Updates**: Runs at 2 AM UTC
-- **Manual Triggers**: Can be run manually or on push
-- **Smart Updates**: Only commits when data changes
-- **Performance Optimized**: SVG optimization and caching
-
-### 🎨 Enabled Plugins (20+)
-1. **🏆 Achievements** - GitHub achievements with secrets
-2. **📅 Activity Calendar** - Full year commit calendar
-3. **🈷️ Languages** - In-depth language analysis
-4. **👨‍💻 Lines of Code** - Code statistics across repos
-5. **📓 Repositories** - Featured, pinned, starred repos
-6. **🌟 Stars** - Recently starred repositories
-7. **📌 Topics** - Starred topics with icons
-8. **🎩 Notable Contributions** - Contributions to other projects
-9. **💡 Coding Habits** - Activity patterns and facts
-10. **🎟️ Follow-up** - Issues and PR tracking
-11. **🧑‍🤝‍🧑 People** - Followers, following, sponsors
-12. **🎭 Reactions** - Comment reactions analysis
-13. **🗂️ Projects** - GitHub projects showcase
-14. **🎫 Gists** - Gist statistics
-15. **🌇 GitHub Skyline** - 3D commit visualization
-16. **📰 Recent Activity** - Latest GitHub activity
-17. **🧮 Traffic** - Repository traffic stats
-18. **♐ Random Code** - Code snippets showcase
-19. **🏅 Contributors** - Repository contributors
-20. **📜 Licenses** - Repository licenses
-21. **💫 Star Lists** - Star lists showcase
-22. **🎲 Fortune** - Community fortune plugin
-
-## 🔑 Required Setup
-
-### 1. GitHub Personal Token
-Create a personal access token with these scopes:
-- `public_repo` (for public repository data)
+You'll need a GitHub Personal Access Token with the following scopes:
+- `repo` (for private repositories)
 - `read:org` (for organization data)
 - `read:user` (for user data)
 
-### 2. Repository Secret
-Add `METRICS_TOKEN` to your repository secrets with your personal access token.
+### 2. Repository Secrets
 
-### 3. Enable Private Contributions
-In your GitHub profile settings, enable "Include private contributions on my profile" for complete metrics.
+Add your token as a repository secret:
+- Go to Settings → Secrets and variables → Actions
+- Add new secret: `GITHUB_TOKEN`
+- Paste your personal access token
 
-## 📈 Customization
+### 3. Optional: Additional Services
 
-### Plugin Configuration
-Each plugin can be customized by modifying the workflow file:
-- Enable/disable plugins with `plugin_[name]: true/false`
-- Configure plugin options with `plugin_[name]_[option]: value`
-- Adjust limits, thresholds, and display options
+For even more features, you can add:
 
-### Template Options
-- `classic` - Standard layout (current)
-- `terminal` - Terminal-style layout
-- `repository` - Repository-focused layout
-- `markdown` - Markdown output format
+#### WakaTime Integration
+```yaml
+plugin_wakatime: yes
+plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+```
 
-### Display Options
-- `config_display: columns` - Multi-column layout
-- `config_animations: true` - CSS animations
-- `config_twemoji: true` - Twitter emojis
-- `config_gemoji: true` - GitHub emojis
+#### Stack Overflow Stats
+```yaml
+plugin_stackoverflow: yes
+plugin_stackoverflow_user: your-stackoverflow-id
+```
 
-## 🎯 Advanced Features
+#### LeetCode Stats
+```yaml
+plugin_leetcode: yes
+plugin_leetcode_user: your-leetcode-username
+```
 
-### Indepth Analysis
-- `plugin_languages_indepth: true` - Clone and analyze repositories
-- `plugin_notable_indepth: true` - Deep contribution analysis
-- `plugin_followup_indepth: true` - Detailed issue/PR analysis
+## 🎨 Customization
 
-### Performance Optimization
-- `optimize: true` - SVG optimization
-- `verify: true` - SVG validation
-- `retries: 3` - Retry failed operations
-- `output_condition: data-changed` - Smart updates
+### Templates
+- **Classic**: GitHub-style design (default)
+- **Terminal**: SSH session aesthetic
+- **Repository**: Repository-focused view
+- **Markdown**: Documentation style
 
-### Community Plugins
-- `plugin_fortune: true` - Fortune cookies
-- Additional community plugins available
+### Colors and Styling
+```yaml
+plugin_languages_colors: rainbow  # Predefined color sets
+config_animations: yes           # CSS animations
+config_display: large            # Size options
+```
 
-## 🔄 Maintenance
+### Language Customization
+```yaml
+plugin_languages_ignored: html, css, dockerfile  # Hide languages
+plugin_languages_aliases: javascript:JS, typescript:TS  # Custom names
+plugin_languages_threshold: 1%  # Minimum percentage to show
+```
 
-### Regular Updates
-- Update submodule monthly for latest features
-- Monitor workflow runs for any issues
-- Adjust plugin configuration as needed
+## 📈 Metrics Update Schedule
 
-### Troubleshooting
-- Check GitHub Actions logs for errors
-- Verify token permissions and scopes
-- Ensure repository secrets are properly set
+- **Standard**: Every 6 hours
+- **Advanced**: Daily at 2 AM UTC
+- **Terminal**: Every 12 hours
 
-## 📚 Resources
+## 🔄 Automatic Updates
 
-- [Metrics Documentation](https://github.com/lowlighter/metrics/blob/master/README.md)
-- [Plugin Documentation](https://github.com/lowlighter/metrics/tree/master/source/plugins)
-- [Template Documentation](https://github.com/lowlighter/metrics/tree/master/source/templates)
-- [Live Configuration Tool](https://metrics.lecoq.io)
+The workflows automatically:
+- ✅ Commit changes only when data changes
+- ✅ Use descriptive commit messages
+- ✅ Handle API rate limits gracefully
+- ✅ Retry on failures
+- ✅ Optimize SVG output
+
+## 🎯 Pro Tips
+
+1. **Indepth Language Analysis**: Uses git clone and linguist analysis for accurate stats
+2. **Smart Filtering**: Ignores common non-programming languages
+3. **Recent Activity**: Shows your latest contributions
+4. **Achievement Tracking**: Displays GitHub accomplishments
+5. **3D Visualizations**: GitHub Skyline and isometric calendar
+
+## 🚨 Important Notes
+
+- **API Limits**: The workflows respect GitHub API rate limits
+- **Performance**: Indepth analysis can take longer but provides more accurate data
+- **Privacy**: All data stays within GitHub's infrastructure
+- **Customization**: Easy to modify colors, languages, and features
+
+## 🔗 Links
+
+- [Metrics Documentation](https://github.com/lowlighter/metrics)
+- [Plugin Reference](https://github.com/lowlighter/metrics/blob/master/README.md#-plugins)
+- [Template Gallery](https://github.com/lowlighter/metrics/blob/master/README.md#-templates)
 
 ---
 
-> 💡 **Pro Tip**: This setup provides the most comprehensive GitHub profile metrics possible with advanced features like indepth analysis, achievement secrets, and community plugins!
+*Generated with ❤️ using lowlighter/metrics*
