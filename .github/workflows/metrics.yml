@@ -11,6 +11,8 @@ on:
 jobs:
   github-metrics:
     runs-on: [self-hosted, linux, x64]
+    environment: 
+      name: production
     permissions:
       contents: write
     steps:
