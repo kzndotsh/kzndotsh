@@ -16,6 +16,14 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: 🔧 Check Docker Access
+        run: |
+          echo "Current user: $(whoami)"
+          echo "Groups: $(groups)"
+          echo "Docker version: $(docker --version)"
+          echo "Docker socket: $(ls -la /var/run/docker.sock)"
+          docker run --rm hello-world
+          
       - name: 📊 Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
@@ -89,5 +97,5 @@ jobs:
           committer_message: "🚀 Auto-generated metrics for run #${{ github.run_number }}"
           
           # 🔧 Debug
-          debug: false
+          debug: true
           plugins_errors_fatal: false
