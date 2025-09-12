@@ -16,11 +16,29 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: 📦 Install Dependencies
+        run: |
+          echo "Installing required dependencies..."
+          sudo apt-get update
+          sudo apt-get install -y docker.io jq curl git
+          
+          # Start Docker service
+          sudo systemctl start docker
+          sudo systemctl enable docker
+          
+          # Add current user to docker group
+          sudo usermod -a -G docker $USER
+          
+          # Test installations
+          echo "Docker version: $(docker --version)"
+          echo "jq version: $(jq --version)"
+          echo "curl version: $(curl --version)"
+          echo "git version: $(git --version)"
+          
       - name: 🔧 Check Docker Access
         run: |
           echo "Current user: $(whoami)"
           echo "Groups: $(groups)"
-          echo "Docker version: $(docker --version)"
           echo "Docker socket: $(ls -la /var/run/docker.sock)"
           docker run --rm hello-world
           
