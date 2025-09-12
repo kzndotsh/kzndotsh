@@ -25,7 +25,7 @@ jobs:
           # 🎨 Template & Display
           template: classic
           config_display: columns
-          config_padding: ["0", "8 + 11%"]
+          config_padding: "0, 8 + 11%"
           config_animations: true
           config_twemoji: true
           config_gemoji: true
@@ -141,15 +141,6 @@ jobs:
           plugin_skyline_year: 2024
           plugin_skyline_frames: 60
           plugin_skyline_quality: high
-          
-          # 📰 Recent Activity
-          plugin_activity: true
-          plugin_activity_limit: 20
-          plugin_activity_load: 200
-          plugin_activity_days: 30
-          plugin_activity_visibility: public
-          plugin_activity_timestamps: true
-          plugin_activity_filter: commits,pr,issues,reviews,releases
           
           # 🧮 Traffic
           plugin_traffic: true
