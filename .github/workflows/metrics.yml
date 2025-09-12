@@ -154,6 +154,15 @@ jobs:
           # 🧮 Traffic
           plugin_traffic: true
           
+          # ⏰ WakaTime
+          plugin_wakatime: true
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_sections: time,projects,projects-graphs,languages,languages-graphs,editors,os
+          plugin_wakatime_days: 30
+          plugin_wakatime_limit: 8
+          plugin_wakatime_languages_other: true
+          plugin_wakatime_repositories_visibility: all
+          
           # ♐ Random Code
           plugin_code: true
           plugin_code_lines: 10
@@ -185,7 +194,7 @@ jobs:
           
           # ⚙️ Configuration
           config_timezone: America/New_York
-          config_order: base,achievements,activity,calendar,languages,lines,repositories,stars,topics,notable,habits,followup,people,reactions,projects,gists,skyline,traffic,code,contributors,licenses,starlists,fortune
+          config_order: base,achievements,activity,calendar,languages,lines,repositories,stars,topics,notable,habits,followup,people,reactions,projects,gists,skyline,traffic,wakatime,code,contributors,licenses,starlists,fortune
           optimize: true
           verify: true
           retries: 3

@@ -29,6 +29,8 @@ This repository uses [lowlighter/metrics](https://github.com/lowlighter/metrics)
 - **🗂️ Projects** - Project management
 - **🎫 Gists** - Code snippets
 - **♐ Code Snippets** - Random code from your repos
+- **🧮 Repository Traffic** - Page views and visitor analytics
+- **⏰ WakaTime** - Coding time tracking and productivity analytics
 
 ## 🔧 Setup Instructions
 
@@ -54,7 +56,28 @@ For even more features, you can add:
 ```yaml
 plugin_wakatime: yes
 plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+plugin_wakatime_sections: time,projects,projects-graphs,languages,languages-graphs,editors,os
+plugin_wakatime_days: 30
+plugin_wakatime_limit: 8
 ```
+
+**Setup Steps:**
+1. Create a [WakaTime account](https://wakatime.com)
+2. Get your API key from [Account Settings](https://wakatime.com/settings/account)
+3. Add it as a repository secret: `WAKATIME_TOKEN`
+4. Install [WakaTime plugins](https://wakatime.com/plugins) for your editors
+
+#### Repository Traffic Analytics
+```yaml
+plugin_traffic: yes
+plugin_traffic_skipped: repo1,repo2  # Optional: skip specific repos
+```
+
+**Features:**
+- Page views across your repositories
+- Visitor analytics and trends
+- Shows which projects get the most attention
+- Requires `repo` scope in your GitHub token
 
 #### Stack Overflow Stats
 ```yaml
@@ -105,6 +128,22 @@ The workflows automatically:
 - ✅ Retry on failures
 - ✅ Optimize SVG output
 
+## 📈 Analytics Features
+
+### 🧮 Repository Traffic
+- **Page Views**: Track how many people visit your repositories
+- **Visitor Analytics**: See which projects get the most attention
+- **Trend Analysis**: Monitor traffic patterns over time
+- **Public Insights**: Showcase your most popular work
+
+### ⏰ WakaTime Integration
+- **Coding Time**: Track total time spent coding
+- **Language Breakdown**: See which languages you use most
+- **Editor Usage**: Monitor your development environment preferences
+- **Project Focus**: Track time spent on different projects
+- **Operating System**: See your development platform usage
+- **Daily Patterns**: Understand your coding habits and productivity
+
 ## 🎯 Pro Tips
 
 1. **Indepth Language Analysis**: Uses git clone and linguist analysis for accurate stats
@@ -112,6 +151,8 @@ The workflows automatically:
 3. **Recent Activity**: Shows your latest contributions
 4. **Achievement Tracking**: Displays GitHub accomplishments
 5. **3D Visualizations**: GitHub Skyline and isometric calendar
+6. **Traffic Analytics**: Monitor repository popularity and engagement
+7. **Time Tracking**: Understand your coding patterns and productivity
 
 ## 🚨 Important Notes
 

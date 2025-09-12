@@ -91,6 +91,18 @@ jobs:
           plugin_skyline_frames: 30
           plugin_skyline_quality: high
           
+          # Repositories traffic
+          plugin_traffic: yes
+          
+          # WakaTime
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+          plugin_wakatime_days: 30
+          plugin_wakatime_limit: 8
+          plugin_wakatime_languages_other: yes
+          plugin_wakatime_repositories_visibility: all
+          
           # Habits and coding patterns
           plugin_habits: yes
           plugin_habits_from: commits, issues, pull-requests

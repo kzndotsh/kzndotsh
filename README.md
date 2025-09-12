@@ -1,5 +1,13 @@
 ![Metrics](/github-metrics.svg)
 
+## 📊 Analytics & Insights
+
+### 🧮 Repository Traffic
+Track page views and visitor analytics across your repositories to see which projects are getting the most attention.
+
+### ⏰ WakaTime Coding Activity
+Monitor your coding time, languages used, editors, and productivity patterns with detailed time tracking analytics.
+
 # Hello World 👋
 
 > 🚀 **Powered by [lowlighter/metrics](https://github.com/lowlighter/metrics)** - This profile is automatically updated with comprehensive GitHub metrics including activity, languages, achievements, and more!

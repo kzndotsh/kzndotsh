@@ -44,6 +44,13 @@ jobs:
           # Traffic data
           plugin_traffic: yes
           
+          # WakaTime
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_sections: time, projects, languages, editors
+          plugin_wakatime_days: 7
+          plugin_wakatime_limit: 5
+          
           # PageSpeed (if you have a website)
           # plugin_pagespeed: yes
           # plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
