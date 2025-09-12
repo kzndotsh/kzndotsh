@@ -39,7 +39,7 @@ jobs:
           echo "All dependencies are available!"
           
       - name: 📊 Generate GitHub Metrics
-        timeout-minutes: 10
+        timeout-minutes: 30
         uses: lowlighter/metrics@latest
         with:
           # 🔑 Authentication
