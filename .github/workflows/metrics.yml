@@ -147,5 +147,4 @@ jobs:
           committer_message: "🚀 Auto-generated metrics for run #${{ github.run_number }}"
           
           # 🔧 Debug
-          debug: true
           plugins_errors_fatal: false
