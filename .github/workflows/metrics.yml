@@ -24,9 +24,43 @@ jobs:
           
           # 🎨 Template & Display
           template: classic
+          config_display: columns
+          config_padding: "0, 8 + 11%"
+          config_animations: true
+          config_twemoji: true
+          config_gemoji: true
+          config_octicon: true
           
           # 📁 Base Content - Main Stats
           base: header, activity, community, repositories, metadata
+          base_indepth: true
+          base_hireable: true
+          
+          # 📅 Activity & Calendar
+          plugin_activity: true
+          plugin_activity_limit: 20
+          plugin_activity_load: 200
+          plugin_activity_days: 365
+          plugin_activity_timestamps: true
+          plugin_activity_filter: commits,pr,issues,reviews
+          
+          plugin_calendar: true
+          plugin_calendar_limit: 3
+          
+          # 🈷️ Languages
+          plugin_languages: true
+          plugin_languages_indepth: true
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1
+          plugin_languages_other: true
+          plugin_languages_details: true
+          plugin_languages_sections: most-used,recently-used
+          
+          # 👨‍💻 Lines of Code
+          plugin_lines: true
+          plugin_lines_sections: repositories,history
+          plugin_lines_repositories_limit: 10
+          plugin_lines_history_limit: 3
           
           # 🧮 Traffic Stats
           plugin_traffic: true
@@ -34,15 +68,26 @@ jobs:
           # ⏰ WakaTime Stats
           plugin_wakatime: true
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_sections: time,projects,languages,editors
+          plugin_wakatime_sections: time,projects,projects-graphs,languages,languages-graphs,editors,os
           plugin_wakatime_days: 30
-          plugin_wakatime_limit: 5
+          plugin_wakatime_limit: 8
+          plugin_wakatime_languages_other: true
+          plugin_wakatime_repositories_visibility: all
           
           # ⚙️ Configuration
           config_timezone: America/New_York
+          config_order: base,activity,calendar,languages,lines,traffic,wakatime
+          optimize: true
+          verify: true
+          retries: 3
+          retries_delay: 5
           
           # 📤 Output
           filename: github-metrics.svg
           output_action: commit
           output_condition: data-changed
           committer_message: "🚀 Auto-generated metrics for run #${{ github.run_number }}"
+          
+          # 🔧 Debug
+          debug: false
+          plugins_errors_fatal: false
