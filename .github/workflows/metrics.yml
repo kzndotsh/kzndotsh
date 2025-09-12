@@ -16,6 +16,13 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: 🧹 Clean Up Old Files
+        run: |
+          echo "Cleaning up old diagnostic files..."
+          rm -rf /home/kaizen/github-runner/_diag/pages/*.log
+          rm -rf /home/kaizen/github-runner/_work/_temp/*
+          echo "Cleanup completed"
+          
       - name: 📊 Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
