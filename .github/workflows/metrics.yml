@@ -59,16 +59,6 @@ jobs:
           base_indepth: true
           base_hireable: true
           
-          # 📅 Activity & Calendar
-          plugin_activity: true
-          plugin_activity_limit: 20
-          plugin_activity_load: 200
-          plugin_activity_days: 365
-          plugin_activity_timestamps: true
-          plugin_activity_filter: commits,pr,issues,reviews
-          
-          plugin_calendar: true
-          plugin_calendar_limit: 3
           
           # 🧮 Traffic Stats
           plugin_traffic: true
@@ -82,11 +72,6 @@ jobs:
           plugin_languages_details: true
           plugin_languages_sections: most-used
           
-          # 👨‍💻 Lines of Code
-          plugin_lines: true
-          plugin_lines_sections: repositories,history
-          plugin_lines_repositories_limit: 10
-          plugin_lines_history_limit: 3
           
           # ⏰ WakaTime Stats (optional - won't fail if token missing)
           plugin_wakatime: true
@@ -99,7 +84,7 @@ jobs:
           
           # ⚙️ Configuration
           config_timezone: America/New_York
-          config_order: base,activity,calendar,traffic,languages,lines,wakatime
+          config_order: base,traffic,languages,wakatime
           optimize: true
           verify: true
           retries: 3
