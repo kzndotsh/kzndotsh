@@ -82,7 +82,7 @@ jobs:
           
           # ⚙️ Configuration
           config_timezone: America/New_York
-          config_order: base,activity,calendar,languages,lines,traffic,wakatime
+          config_order: base,activity,calendar,traffic,wakatime,languages,lines
           optimize: true
           verify: true
           retries: 3
