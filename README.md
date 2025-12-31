@@ -2,8 +2,8 @@
 
 ## About Me
 - **Senior Software Engineer & Solutions Architect** with nearly 10 years of experience
-- Currently building [Tux](https://github.com/allthingslinux/tux) and leading [All Things Linux](https://discord.gg/linux) (14K+ members)
-- **Founder** of a 501(c)(3) Linux nonprofit with 7M+ messages and 40+ volunteers
+- Currently building [Tux](https://github.com/allthingslinux/tux) and leading [discord.gg/linux](https://discord.gg/linux) (14K+ members)
+- **Founder** of a 501(c)(3) Linux nonprofit (30+ volunteers) [All Things Linux(https://allthingslinux.org)
 - Graduate of the Full Stack Web Development Program at Bloom Institute of Technology
 - **Full Stack Developer** specializing in React/Next.js, Shadcn/Tailwind, Prisma, and Postgres
 - **DevOps enthusiast** - Docker, CI/CD, Linux, self-hosting, and open source advocate
