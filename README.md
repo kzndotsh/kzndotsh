@@ -35,8 +35,8 @@ Stripe • Shopify • Airtable • Zapier • Make • WordPress • Twilio •
 **Testing & Quality**  
 Vitest • ESLint • Prettier • Pyright • Ruff • Stylelint • Knip • Lefthook • Ultracite • Codecov • Pytest • Pre-commit
 
-**Tooling & CLI**
+**Tooling & CLI**  
 Mise • just • Turbo • Renovate • Wrangler • Rclone
 
-**Homelab & Selfhosting**
+**Homelab & Selfhosting**  
 Sonarr/Radarr/Lidarr/Readarr/Bazarr/Prowlarr • Plex/Emby/Jellyfin • Saltbox • Seerr • Tautulli • qBit/SAB • Autobrr • Nextcloud • Union/mergeFS • CephFS
